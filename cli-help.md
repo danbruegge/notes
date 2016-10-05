@@ -3,6 +3,7 @@ A collection of useful CLI commands.
 Bash
 ====
 + restart bash
+
     ```
     source ~/.bashrc
     OR
@@ -25,6 +26,7 @@ Hard drive
 + View folder size
     + `du -h /path/to/dir`
 + TRIM
+
     ```
     fstrim -v /
     fstrim -v /home
@@ -53,11 +55,13 @@ Files
 Pacman
 ======
 + Save manually installed packages into a file
+
     ```
     pacman -Qqe | grep -vx "`pacman -Sqg base base-devel xorg kde gstreamer0.10-plugins`" > datei.txt
     ```
 + [Locating .pac* files](https://wiki.archlinux.org/index.php/Pacman/Pacnew_and_Pacsave#Locating_.pac.2A_files)
 + Get installed packages despite a broken pacman db
+
     ```
     lostfiles | while read file; do pkgfile -q "$file"; done | awk '!x[$0]++'
     lostfiles | while read file; do pkgfile -q "$file"; done | awk '!x[$0]++' | pacman -S --force -
@@ -94,6 +98,7 @@ Images
     + `mogrify -resize 1024x768 +.jpg`
         + with `-quality [VALUE]` you can specify the quality
     + Better solution
+
         ```
         for i in $( ls +.jpg); do convert -resize 50% $i re`$i; done
         ```
