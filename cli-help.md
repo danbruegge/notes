@@ -1,7 +1,8 @@
 A collection of useful CLI commands.
+====================================
 
 Bash
-====
+----
 + restart bash
 
     ```
@@ -12,7 +13,7 @@ Bash
 
 
 Hard drive
-==========
+----------
 + Mirror hard drive
     + `dd if=/dev/sda of /dev/sdb`
 + Progress of dd
@@ -36,7 +37,7 @@ Hard drive
 
 
 Files
-=====
+-----
 + View file permissions
     + `ls -l`
     + `ls -hal`
@@ -53,7 +54,7 @@ Files
 
 
 Pacman
-======
+------
 + Save manually installed packages into a file
 
     ```
@@ -70,7 +71,7 @@ Pacman
 
 
 System
-======
+------
 + Show certain system informations
     + `uname --help`
 + Show kernel version
@@ -85,13 +86,13 @@ System
 
 
 Network
-=======
+-------
 + Show programs that generate traffic
     + `lsof -i`
 
 
 Images
-======
+------
 + JPG -> PDF - require: _imagemagick_
     + `convert foo.jpg bar.pdf`
 + Adjust image size of multiple images - require: _imagemagick_
@@ -109,13 +110,13 @@ Images
 
 
 Documents
-=========
+---------
 + PDF -> TXT
     + `pdftotext -layout foobar.pdf`
 
 
 Multimedia
-==========
+----------
 + mount .iso
     + `mount -o loop image.iso /mnt/<mountpoint>`
 + .bin2iso (mount)
@@ -125,6 +126,6 @@ Multimedia
 
 
 Internet
-========
+--------
 + rsync only one file type
     + `rsync -avz --include "*.jpg" --exclude "*" SRC DEST`
